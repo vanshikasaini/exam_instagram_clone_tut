@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15334781338",
+    "project_id": "van-insta-clone",
+    "storage_bucket": "van-insta-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15334781338:android:5628fd157c1e34f8fe0a23",
+        "android_client_info": {
+          "package_name": "com.example.exam_instagram_clone_tut"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjVW8MHeLvqy-1duGf_MKeAXte39jZJ14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
