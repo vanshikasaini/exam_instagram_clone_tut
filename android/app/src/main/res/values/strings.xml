@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="facebook_app_id">868832038221897</string>
+<string name="fb_login_protocol_scheme">fb868832038221897</string>
+<string name="facebook_client_token">c5d9450a3fd6526416d23b66a9d6a57d</string>
+<string name="app_name">van Image Sharing tut</string>
+
+</resources>
