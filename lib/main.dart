@@ -1,6 +1,7 @@
 import 'package:exam_instagram_clone_tut/state/auth/backend/authenticator.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/auth_state_provider.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/is_logged_in_provider.dart';
+import 'package:exam_instagram_clone_tut/views/components/loading/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -69,9 +70,10 @@ class MainView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Main View")),
       body: Consumer(
-        builder: (context, ref, child) {
+        builder: (_, ref, child) {
           return TextButton(
             onPressed: () async {
+              // LoadingScreen.instance().show(context: context, text: "Helloe");
               await ref.read(authStateProvider.notifier).logOut();
             },
             child: const Text("Logout"),
