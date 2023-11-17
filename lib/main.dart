@@ -1,6 +1,6 @@
-import 'package:exam_instagram_clone_tut/state/auth/backend/authenticator.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/auth_state_provider.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/is_logged_in_provider.dart';
+import 'package:exam_instagram_clone_tut/state/providers/is_loading_provider.dart';
 import 'package:exam_instagram_clone_tut/views/components/loading/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -49,6 +49,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Consumer(
         builder: (context, ref, child) {
+          // take care of displaying the loading  screen
+          ref.listen<bool>(
+            isLoadingProvider,
+            (_, isLoading) {
+              if (isLoading) {
+                LoadingScreen.instance().show(
+                  context: context,
+                );
+              } else {
+                LoadingScreen.instance().hide();
+              }
+            },
+          );
           final isLoggedInUser = ref.watch(isLoggedInProvider);
           if (isLoggedInUser) {
             return const MainView();
