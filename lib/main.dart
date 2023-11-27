@@ -1,7 +1,11 @@
 import 'package:exam_instagram_clone_tut/state/auth/providers/auth_state_provider.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/is_logged_in_provider.dart';
 import 'package:exam_instagram_clone_tut/state/providers/is_loading_provider.dart';
+import 'package:exam_instagram_clone_tut/views/components/animations/data_not_found_animation_view.dart';
+import 'package:exam_instagram_clone_tut/views/components/animations/empty_content_with_text_animation_view.dart';
+import 'package:exam_instagram_clone_tut/views/components/animations/error_animation_view.dart';
 import 'package:exam_instagram_clone_tut/views/components/loading/loading_screen.dart';
+import 'package:exam_instagram_clone_tut/views/login/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -63,6 +67,7 @@ class MyApp extends StatelessWidget {
             },
           );
           final isLoggedInUser = ref.watch(isLoggedInProvider);
+
           if (isLoggedInUser) {
             return const MainView();
           } else {
@@ -97,28 +102,29 @@ class MainView extends StatelessWidget {
   }
 }
 
-// user not logged in
-class LoginView extends ConsumerWidget {
-  const LoginView({
-    super.key,
-  });
+// user not logged in==> used for initial test
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login View'),
-      ),
-      body: Column(children: [
-        TextButton(
-          onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-          child: const Text("Sign In Google"),
-        ),
-        TextButton(
-          onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
-          child: const Text("Sign In Facebook"),
-        )
-      ]),
-    );
-  }
-}
+// class LoginView extends ConsumerWidget {
+//   const LoginView({
+//     super.key,
+//   });
+
+//   @override
+//   Widget build(BuildContext context, WidgetRef ref) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Login View'),
+//       ),
+//       body: Column(children: [
+//         TextButton(
+//           onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
+//           child: const Text("Sign In Google"),
+//         ),
+//         TextButton(
+//           onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
+//           child: const Text("Sign In Facebook"),
+//         )
+//       ]),
+//     );
+//   }
+// }
