@@ -1,5 +1,5 @@
 import 'package:exam_instagram_clone_tut/state/auth/providers/auth_state_provider.dart';
-import 'package:exam_instagram_clone_tut/views/components/constants/strings.dart';
+import 'package:exam_instagram_clone_tut/views/constants/strings.dart';
 import 'package:exam_instagram_clone_tut/views/constants/app_colors.dart';
 import 'package:exam_instagram_clone_tut/views/login/divider_with_margins.dart';
 import 'package:exam_instagram_clone_tut/views/login/facebook_button.dart';

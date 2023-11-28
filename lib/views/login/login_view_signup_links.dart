@@ -1,7 +1,6 @@
-import 'package:exam_instagram_clone_tut/views/components/constants/strings.dart';
+import 'package:exam_instagram_clone_tut/views/constants/strings.dart';
 import 'package:exam_instagram_clone_tut/views/components/rich_text/base_text.dart';
 import 'package:exam_instagram_clone_tut/views/components/rich_text/rich_text_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

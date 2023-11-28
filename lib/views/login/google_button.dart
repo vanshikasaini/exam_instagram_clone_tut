@@ -1,6 +1,5 @@
-import 'package:exam_instagram_clone_tut/views/components/constants/strings.dart';
+import 'package:exam_instagram_clone_tut/views/constants/strings.dart';
 import 'package:exam_instagram_clone_tut/views/constants/app_colors.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

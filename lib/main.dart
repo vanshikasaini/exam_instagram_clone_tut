@@ -1,11 +1,8 @@
-import 'package:exam_instagram_clone_tut/state/auth/providers/auth_state_provider.dart';
 import 'package:exam_instagram_clone_tut/state/auth/providers/is_logged_in_provider.dart';
 import 'package:exam_instagram_clone_tut/state/providers/is_loading_provider.dart';
-import 'package:exam_instagram_clone_tut/views/components/animations/data_not_found_animation_view.dart';
-import 'package:exam_instagram_clone_tut/views/components/animations/empty_content_with_text_animation_view.dart';
-import 'package:exam_instagram_clone_tut/views/components/animations/error_animation_view.dart';
 import 'package:exam_instagram_clone_tut/views/components/loading/loading_screen.dart';
 import 'package:exam_instagram_clone_tut/views/login/login_view.dart';
+import 'package:exam_instagram_clone_tut/views/main/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -79,28 +76,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// user already login
-class MainView extends StatelessWidget {
-  const MainView({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Main View")),
-      body: Consumer(
-        builder: (_, ref, child) {
-          return TextButton(
-            onPressed: () async {
-              // LoadingScreen.instance().show(context: context, text: "Helloe");
-              await ref.read(authStateProvider.notifier).logOut();
-            },
-            child: const Text("Logout"),
-          );
-        },
-      ),
-    );
-  }
-}
 
 // user not logged in==> used for initial test
 
